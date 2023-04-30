@@ -4,14 +4,14 @@ import Nav from './components/nav/Nav';
 import Login from './components/login/Login';
 import Footer from './components/footer/Footer';
 import SignUp from './components/signup/Signup';
+import RouteHandler from './components/router/RouteHandler';
 
 function App() {
   return (
     <div className="App">
         <Nav/>
-        <Login/>
+        <RouteHandler/>
         <Footer/>
-        {/* <SignUp/> */}
     </div>
   );
 }
