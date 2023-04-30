@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['LOGIN', 'SIGN-UP', 'REGISTER-STUDENT','VIEW'];
+const pages = ['Login', 'Sign-up', 'Register Student','View'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Nav=()=> {
