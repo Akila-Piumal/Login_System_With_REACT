@@ -9,6 +9,7 @@ const RouteHandler = () => {
       <Routes>
         <Route path='/' element={<Login/>}/>
         <Route path='Sign-up' element={<SignUp/>}/>
+        <Route path='Login' element={<Login/>}/>
       </Routes>
     </>
   )

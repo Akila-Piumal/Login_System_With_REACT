@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link } from 'react-router-dom';
 
 const pages = ['Login', 'Sign-up', 'Register Student','View'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -120,7 +121,9 @@ const Nav=()=> {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link style={{textDecoration: "none", color:"white"}} to = {`/${page}`}>
+                    {page}
+                </Link>
               </Button>
             ))}
           </Box>
