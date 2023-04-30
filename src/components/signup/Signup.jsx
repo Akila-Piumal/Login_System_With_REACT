@@ -12,21 +12,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import { Paper } from '@mui/material';
 
 const theme = createTheme();
+const paperStyle={padding:20,height:'85vh',width:'60vw',margin:'80px auto'}
 
 const SignUp=()=> {
   const handleSubmit = (event) => {
@@ -39,6 +28,10 @@ const SignUp=()=> {
   };
 
   return (
+    <Paper 
+        elevation={10}
+        style={paperStyle}
+    >
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -124,9 +117,9 @@ const SignUp=()=> {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
+    </Paper>
   );
 }
 
