@@ -7,6 +7,16 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
+// Get data from local storage
+const collectDataFromLocalStorage = () => {
+    const data = localStorage.getItem('formDetails');
+    if(data){
+        return JSON.parse(data);
+    }else{
+        return []
+    }
+}
+
 const RegisterStudent = () => {
 
     // state Management
@@ -19,7 +29,7 @@ const RegisterStudent = () => {
     const [course,setCourse] = useState("");
 
     // set form details
-    const [formDetails,setFormDetails] = useState([]);
+    const [formDetails,setFormDetails] = useState(collectDataFromLocalStorage());
 
     const handleonsubmit = (e) =>{
         e.preventDefault();
