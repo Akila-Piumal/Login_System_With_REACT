@@ -10,10 +10,9 @@ import RegisterStudent from './components/dataform/RegisterStudent';
 function App() {
   return (
     <div className="App">
-        {/* <Nav/>
+        <Nav/>
         <RouteHandler/>
-        <Footer/> */}
-        <RegisterStudent/>
+        <Footer/>
     </div>
   );
 }
