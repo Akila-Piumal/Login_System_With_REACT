@@ -18,4 +18,4 @@ const DataFormCommon = (props) => {
   )
 }
 
-export default DataFormCommon
+export default DataFormCommon;

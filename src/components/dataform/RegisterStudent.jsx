@@ -6,6 +6,7 @@ import './RegisterStudent.css'
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import DataFormCommon from '../common/DataFormCommon';
 
 // Get data from local storage
 const collectDataFromLocalStorage = () => {
@@ -79,54 +80,54 @@ const RegisterStudent = () => {
                       <Avatar><AccountCircleIcon/></Avatar>
                   </div>
 
-                  <TextField 
-                      className='forminput-age'
-                      label="Student Id"
-                      variant="outlined"
-                      type='number'
-                      required='required'
-                      value={stuId}
-                      onChange={e=>setStuId(e.target.value)}
+                  <DataFormCommon
+                        className="forminput-age"
+                        label="Student Id"
+                        variant="outlined"
+                        type='number'
+                        required='required'
+                        value={stuId}
+                        onChange={setStuId}
                   />
 
-                  <TextField 
-                      className='forminput'
-                      label="First Name"
-                      variant="outlined"
-                      type='text'
-                      required='required'
-                      value={firstName}
-                      onChange={e=>setFirstName(e.target.value)}
+                  <DataFormCommon
+                        className='forminput'
+                        label="First Name"
+                        variant="outlined"
+                        type='text'
+                        required='required'
+                        value={firstName}
+                        onChange={setFirstName}
                   />
 
-                  <TextField 
-                      className='forminput'
-                      label="Last Name"
-                      variant="outlined"
-                      type='text'
-                      required='required'
-                      value={lastName}
-                      onChange={e=>setLastName(e.target.value)}
+                  <DataFormCommon
+                        className='forminput'
+                        label="Last Name"
+                        variant="outlined"
+                        type='text'
+                        required='required'
+                        value={lastName}
+                        onChange={setLastName}
                   />
 
-                  <TextField 
-                      className='forminput'
-                      label="Address"
-                      variant="outlined"
-                      type='text'
-                      required='required'
-                      value={address}
-                      onChange={e=>setAddress(e.target.value)}
+                  <DataFormCommon
+                        className='forminput'
+                        label="Address"
+                        variant="outlined"
+                        type='text'
+                        required='required'
+                        value={address}
+                        onChange={setAddress}
                   />
 
-                  <TextField 
-                      className='forminput'
-                      label="Email"
-                      variant="outlined"
-                      type='email'
-                      required='required'
-                      value={email}
-                      onChange={e=>setEmail(e.target.value)}
+                  <DataFormCommon
+                        className='forminput'
+                        label="Email"
+                        variant="outlined"
+                        type='email'
+                        required='required'
+                        value={email}
+                        onChange={setEmail}
                   />
 
                   <FormControl>
