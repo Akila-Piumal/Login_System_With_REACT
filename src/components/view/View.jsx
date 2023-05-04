@@ -2,6 +2,7 @@ import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import React, { useEffect, useState } from 'react'
+import './View.css'
 
 const View = () => {
     const [stuData,setStuData] = useState([])
@@ -15,7 +16,7 @@ const View = () => {
     return (
         <div className='tbl-view'>
             <table>
-                <thead>
+                <thead id='thead'>
                     <th>Student Id</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -60,3 +61,6 @@ const View = () => {
 }
 
 export default View
+
+
+
