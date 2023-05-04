@@ -7,6 +7,8 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import DataFormCommon from '../common/DataFormCommon';
+import {Gender} from '../../data/Gender'
+import {Courses} from '../../data/Courses'
 
 // Get data from local storage
 const collectDataFromLocalStorage = () => {
@@ -142,8 +144,8 @@ const RegisterStudent = () => {
                             onChange={e=>setGender(e.target.value)}
                         >
                             <MenuItem value="Gender"><em>None</em></MenuItem>
-                            <MenuItem value="Male">Male</MenuItem>
-                            <MenuItem value="Female">Female</MenuItem>
+                            <MenuItem value={Gender.Gender1}>Male</MenuItem>
+                            <MenuItem value={Gender.Gender2}>Female</MenuItem>
                         </Select>
                   </FormControl>
 
@@ -159,9 +161,9 @@ const RegisterStudent = () => {
                             onChange={e=>setCourse(e.target.value)}
                         >
                             <MenuItem value="Course"><em>None</em></MenuItem>
-                            <MenuItem value="cmjd">CMJD</MenuItem>
-                            <MenuItem value="gdse">GDSE</MenuItem>
-                            <MenuItem value="dep">DEP</MenuItem>
+                            <MenuItem value={Courses.Course1}>CMJD</MenuItem>
+                            <MenuItem value={Courses.Course2}>GDSE</MenuItem>
+                            <MenuItem value={Courses.Course3}>DEP</MenuItem>
                         </Select>
                   </FormControl>
 
