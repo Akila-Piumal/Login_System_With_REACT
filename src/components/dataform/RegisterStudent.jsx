@@ -1,5 +1,5 @@
 import { Avatar, Button, FormControl, Grid, Paper, Stack } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import TextField from '@mui/material/TextField'
 import './RegisterStudent.css'
@@ -18,14 +18,42 @@ const RegisterStudent = () => {
     const [gender,setGender] = useState("");
     const [course,setCourse] = useState("");
 
+    // set form details
+    const [formDetails,setFormDetails] = useState([]);
+
+    const handleonsubmit = (e) =>{
+        e.preventDefault();
+
+        const formData = {
+            stuId,
+            firstName,
+            lastName,
+            address,
+            email,
+            gender,
+            course
+        }
+
+        console.log(formData);
+
+        setFormDetails([...formDetails,formData])
+
+        setStuId("");
+        setFirstName("");
+        setLastName("");
+        setAddress("");
+        setEmail("");
+        setGender("");
+        setCourse("");
+    }
+
+
+    //Save data in local storage
+    useEffect(()=>{
+        localStorage.setItem('formDetails',JSON.stringify(formDetails));
+    },[formDetails]);
+
   const paperStyle={padding: 20, height:'110vh', width:'60vw', margin:'80px auto'}
-
-  const handleonsubmit = (e) =>{
-    e.preventDefault();
-
-    console.log(stuId,firstName,lastName,address,email,gender,course);
-
-  }
 
   return (
       <Grid className='main-outer'>
