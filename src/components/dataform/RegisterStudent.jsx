@@ -15,8 +15,8 @@ const collectDataFromLocalStorage = () => {
     const data = localStorage.getItem('formDetails');
     if(data){
         return JSON.parse(data);
-    }else{
-        return []
+    } else {
+        return [];
     }
 }
 
