@@ -1,4 +1,4 @@
-import { Avatar, FormControl, Grid, Paper } from '@mui/material'
+import { Avatar, Button, FormControl, Grid, Paper, Stack } from '@mui/material'
 import React from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import TextField from '@mui/material/TextField'
@@ -9,7 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 const RegisterStudent = () => {
 
-  const paperStyle={padding: 20, height:'105vh', width:'60vw', margin:'80px auto'}
+  const paperStyle={padding: 20, height:'110vh', width:'60vw', margin:'80px auto'}
 
   const handleonsubmit = (e) =>{
     alert("Ok")
@@ -99,6 +99,16 @@ const RegisterStudent = () => {
                             <MenuItem value="dep">DEP</MenuItem>
                         </Select>
                   </FormControl>
+
+                  <Stack direction="row" spacing={2}>
+                    <Button variant='outlined' color='success' type='submit'>
+                        Save
+                    </Button>
+
+                    <Button variant='outlined' color='error' type='reset'>
+                        Reset
+                    </Button>
+                  </Stack>
                   
               </Paper>
           </form>
