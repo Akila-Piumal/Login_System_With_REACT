@@ -5,13 +5,15 @@ import Login from './components/login/Login';
 import Footer from './components/footer/Footer';
 import SignUp from './components/signup/Signup';
 import RouteHandler from './components/router/RouteHandler';
+import RegisterStudent from './components/dataform/RegisterStudent';
 
 function App() {
   return (
     <div className="App">
-        <Nav/>
+        {/* <Nav/>
         <RouteHandler/>
-        <Footer/>
+        <Footer/> */}
+        <RegisterStudent/>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.stu-detail-form{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.main-outer{
+    background: rgb(75,181,238);
+    background: linear-gradient(90deg, rgb(241, 176, 55) 0%, rgb(232, 231, 128) 0%, rgb(241, 120, 14) 100%); 
+    overflow: hidden;
+}
+
+.forminput{
+    width: 50vw;
+}
+.forminput-age{
+    width: 15vw;
+}
+.input-data{
+    width: 200px;
+}

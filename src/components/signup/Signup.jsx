@@ -15,7 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Paper } from '@mui/material';
 
 const theme = createTheme();
-const paperStyle={padding:20,height:'85vh',width:'60vw',margin:'80px auto'}
+const paperStyle={padding:20,height:'85vh',width:'60vw',margin:'30px auto'}
 
 const SignUp=()=> {
   const handleSubmit = (event) => {
@@ -37,7 +37,7 @@ const SignUp=()=> {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 2,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
